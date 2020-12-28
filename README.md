@@ -7,3 +7,5 @@
 4. git status (for the status)
 
 5. git pull (to pull the changes)
+
+- git clone (link) to clone the repository
