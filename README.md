@@ -13,4 +13,4 @@
 Branches
 - git branch: to view branches
 - git branch new: creates a new branch with name new
- 
+- git checkout branchname: switches to branch with name branchname 
