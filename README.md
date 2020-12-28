@@ -5,3 +5,5 @@
 3. git push
 
 4. git status (for the status)
+
+5. git pull (to pull the changes)
