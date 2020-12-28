@@ -10,7 +10,7 @@
 
 - git clone (link) to clone the repository
 
-Branches\n
+Branches:
 Create a new branch when wanting to change something - avoid working in main
 - git branch: to view branches
 - git branch new: creates a new branch with name new
