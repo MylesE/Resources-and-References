@@ -10,6 +10,20 @@
 
 - git clone (link) to clone the repository
 
+# Creating a new repository using the command line
+- echo "# REPOSITORY_NAME_HERE" >> README.md
+- git init
+- git add README.md
+- git commit -m "FIRST_COMMIT_MESSAGE_HERE"
+- git branch -M main
+- git remote add origin https://github.com/MylesE/GIT_REPOSITORY_LINK.git
+- git push -u origin main
+
+# Pushing an existing repository from the command line:
+- git remote add origin https://github.com/MylesE/GIT_REPOSITORY_LINK.git
+- git branch -M main
+- git push -u origin main
+
 # Branches:
 Create a new branch when wanting to change something - avoid working in main
 - git branch: to view branches
