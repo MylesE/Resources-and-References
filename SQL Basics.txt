@@ -1,0 +1,84 @@
+SQL - Search Query Language
+
+Common commands include: Select, Insert, Update, Delete, Create, and Drop
+
+
+
+Selecting data:
+select statement is used to query the database and retrieve selected data matching the specified criteria. An example:
+
+select "column1"
+	[, "column2", etc]
+	from "tablename"
+	[where "condition"];  # where the [] indicates portions which are optional to be included
+
+Can use * to select all columns
+
+the where clause (which is optional) specifies which data to be returned/displayed, using conditionals such as =, >, <, >=, <=, <>, LIKE
+note that <> means 'not equal to', and LIKE can parse parts of characters, for example:
+
+select first, last, city
+	from info
+	where first LIKE 'Er%' #will select any first names that start with Er (% represents an arbitrary character(s))
+
+
+	
+Creating Tables syntax:
+create table "tablename"
+("column1" "data type",
+column2" "data type", ...);
+
+or with constraints:
+create table "tablename"
+("column1" "data type" [constraint],
+"column" "data type" [constraint]...); # where the [] part is optional
+
+You can have as many columns as desired, with optional constraints. Do note that table and column names must start with a letter, and must not
+exceed 30 characters in length. Also don't use any SQL reserved keywords as names
+
+Common data types:
+	char(size)    # fixed length character string
+	varchar(size) # variable length character string
+	number(size)
+	date
+	number(size,d)# number with maximum number of digits "size", and maximum "d" number of decimal digits
+
+
+	
+Inserting into a table syntax:
+insert into "tablename"
+	(first_column, ..., last_column)
+	values(first_value, ..., last_value); #where the column and values match up
+
+Note that strings must be enclosed between single quotes 'string' , and numbers should not have quotes
+
+
+
+Updating records syntax:
+update "tablename"
+	set "columnname" = "newvalue" [, "nextcolumn" = "newvalue2" ...]
+	where "columname" OPERATOR "value" [and|or "column" OPERATOR "value"]; #where the [] parts are optional
+
+Examples:
+update phone_book
+	set area_code = 623
+	where prefix = 979;
+
+update phone_book
+	set last_name = 'Smith', prefix=555, suffix=9292
+	where last_name = 'Jones';
+
+Can verify changes after by using a select statement
+
+
+
+Deleting records syntax:
+delete from "tablename" where "columnname" OPERATOR "value" [and|or "column" OPERATOR "value"]; # where [] parts are optional
+
+For example removing employees with lastname "May":
+delete from employees where lastname = 'May';  # note that if you just put [delete from employees;] everything will be deleted
+
+
+
+Drop Table syntax:
+drop table "tablename" # is used to delete a table and all rows in the table (removes the table definition in addition to all of its content)
