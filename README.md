@@ -1,4 +1,4 @@
-# testing
+# Basic Git commands
 
 1. git add (filename)
 2. git commit -m"message here"
